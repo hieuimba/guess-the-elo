@@ -77,6 +77,22 @@ endlessOptionObserver.observe(document.getElementById("roundsSelection"), {
 // difficultyOptionObserver.observe(document.getElementById("evalSelection"), {
 //   childList: true,
 // });
+const notyf = new Notyf({
+  duration: 3000,
+  position: {
+    x: "center",
+    y: "top",
+  },
+  ripple: false,
+  dismissible: true,
+  types: [
+    {
+      type: "info",
+      background: "grey",
+      icon: '<svg xmlns="http://www.w3.org/2000/svg" class="notyfIcon" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg>',
+    },
+  ],
+});
 
 window.addEventListener("load", function () {
   var body = document.body;
@@ -92,8 +108,11 @@ window.addEventListener("load", function () {
   var viewHeight = window.innerHeight;
 
   if (bodyHeight > viewHeight) {
-    alert(
-      "Content exceeds screen size.\nFor the best experience, enable fullscreen mode or try Ctrl - to zoom out."
-    );
+    // Create an instance of Notyf
+    notyf.open({
+      type: "info",
+      message:
+        "Content exceeds screen size!<br>For the best experience, enable fullscreen mode or try Ctrl - to zoom out.",
+    });
   }
 });

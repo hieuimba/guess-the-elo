@@ -7,11 +7,11 @@
     <title>Play Guess The ELO</title>
     <meta name="description"
         content="Play the Guess the Elo game for chess. Test your chess skills to guess the Elo rating of chess matches and see how high you can score!">
-    <link rel=" icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <link href="node_modules/lichess-pgn-viewer/dist/lichess-pgn-viewer.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lichess-pgn-viewer@2.1.0/dist/lichess-pgn-viewer.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
@@ -328,8 +328,8 @@
     <audio id="gameEndSound" src="sounds/effects/game-end.wav" preload="auto"></audio>
     <audio id="gameStartSound" src="sounds/effects/game-start.wav" preload="auto"></audio>
     <audio id="countdownSound" src="sounds/effects/countdown-new.wav" preload="auto"></audio>
-    <script defer src="node_modules/hacktimer/HackTimer.min.js"></script>
-
+    <script defer src="https://cdn.jsdelivr.net/npm/hacktimer@1.1.3/HackTimer.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
     <script defer src="js/home.js" type="module"></script>
     <script defer src="js/game.js" type="module"></script>
     <script defer src="js/other/resize.js" type="module"></script>

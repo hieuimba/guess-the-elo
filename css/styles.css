@@ -875,3 +875,14 @@ img.light-shadow {
 #longestStreakValue {
   text-align: right;
 }
+
+.notyf__toast {
+  font-family: "oswald";
+  max-width: none !important;
+}
+
+.notyfIcon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+}
